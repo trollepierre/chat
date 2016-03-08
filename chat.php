@@ -1,5 +1,9 @@
 <?php
-$nom = $_POST['nom'];
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+sec_session_start();
+/*$nom = $_POST['nom'];*/
+$nom =  $_SESSION['username'];
 $message = $_POST['message'];
 $arrayToAppend['nom']=$nom;
 $arrayToAppend['when']="03/03/2016 23:59";

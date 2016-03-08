@@ -42,10 +42,11 @@ sec_session_start();
 			var message = $('#btn-input').val();
 			alert("Votre message a bien été envoyé !");
 			$.post('chat.php',{
-				'nom':getSessionUsername(),
+				/*'nom':getSessionUsername(),*/
 				'message':message
 			},
 			function(){
+				alert("Post envoyé !")
 				showConversation();
 				$('#btn-input').val('');
 				$('#message').focus();
